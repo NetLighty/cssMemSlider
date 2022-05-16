@@ -6,19 +6,136 @@
 }
 body{
   background-color: black;
+	height: 100vh;
+	overflow: hidden;
+}
+.wrapper-container{
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	height: 75vw;
+	width: 75vw;
+	background-color: rgb(93, 93, 93);
+	margin: 0 auto;
+	margin-top: 10vw;
+	border-radius: 1.3rem;
 }
 .mem-slider{
-background-color: aquamarine;
+  background-color: transparent;
+}
+.text-slider{
+
 }
 .mem-wrapper{
-display: grid;
-background-color: rgb(93, 93, 93);
-top: 10vh;
-height: 55vh;
-width: 50vw;
-margin: 0 auto;
-position: relative;
+	display: grid;
+	grid-template-columns: 49vw 21vw;
+	grid-template-rows: 56vw 14vw;
+	height: 70vw;
+	width: 70vw;
 }
+.mem-slider{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+.text-slider{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	align-self: center;
+}
+.mem-wrapper label{
+	cursor: pointer;
+	border: 0.1rem solid black;
+	height: 1rem;
+	width: 1rem;
+	margin-right: 0.7rem;
+	border-radius: 50%;
+	transition: background ease-in-out .4s;
+}
+.mem-wrapper label:hover, 
+#listen:checked ~ .slider-controls label:nth-of-type(1),
+#sheridan:checked ~ .slider-controls label:nth-of-type(2),
+#ressort:checked ~ .slider-controls label:nth-of-type(3),
+#sadness:checked ~ .slider-controls label:nth-of-type(4) {
+	background: black;
+}
+.mem-wrapper .slider-controls{
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr 1fr;
+ justify-self: end;
+ align-self: center;
+}
+.radio{
+	display: none;
+}
+.listen{}
+.sheridan{}
+.ressort{}
+.sadness{}
 .slide{
-  position: absolute;
+	height: 56vw;
+	width: 70vw;
+	opacity: 0;
+	transition:transform ease-in-out .5s, opacity ease-in-out .5s;
+}
+.mem-text{
+ font-size: 2rem;
+ color: black;
+ width: 10vw;
+ opacity: 0;
+}
+#listen:checked ~ .mem-slider > .listen {
+	opacity: 1;
+	transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+}
+#sheridan:checked ~ .mem-slider > .sheridan {
+	opacity: 1;
+	transform: translateX(-70vw);
+	transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+}
+#ressort:checked ~ .mem-slider > .ressort{
+	opacity: 1;
+	transform: translateX(-140vw);
+	transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+}
+#sadness:checked ~ .mem-slider > .sadness {
+	opacity: 1;
+	transform: translateX(-210vw);
+	transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+}
+#listen:checked ~ .text-slider > .listen-text {
+	opacity: 1;
+	transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+}
+#sheridan:checked ~ .text-slider > .sheridan-text {
+	opacity: 1;
+	transform: translateX(-70vw);
+	transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+}
+#ressort:checked ~ .text-slider > .ressort-text{
+	opacity: 1;
+	transform: translateX(-140vw);
+	transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+}
+#sadness:checked ~ .text-slider > .sadness-text {
+	opacity: 1;
+	transform: translateX(-210vw);
+	transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+}
+.listen{
+ background: no-repeat url('./images/listen.jpg');
+ background-size: cover;
+}
+.sheridan{
+	background: no-repeat url('./images/sheridan.jpg');
+	background-size: cover;
+}
+.ressort{
+	background: no-repeat url('./images/ressort.jpg');
+	background-size: cover;
+}
+.sadness{
+	background: no-repeat url('./images/sadness.jpg');
+	background-size: cover;
 }
