@@ -138,19 +138,19 @@ body{
 }
 .listen{
  background: no-repeat url('./images/listen.jpg');
- background-size: cover;
+ background-size: 100% 100%;
 }
 .sheridan{
 	background: no-repeat url('./images/sheridan.jpg');
-	background-size: cover;
+	background-size: 100% 100%;
 }
 .ressort{
 	background: no-repeat url('./images/ressort.jpg');
-	background-size: cover;
+	background-size: 100% 100%;
 }
 .sadness{
 	background: no-repeat url('./images/sadness.jpg');
-	background-size: cover;
+	background-size: 100% 100%;
 }
 
 @media (max-width: 767px) {
