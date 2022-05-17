@@ -59,6 +59,9 @@ body{
 	border-radius: 50%;
 	transition: background ease-in-out .4s;
 }
+.circle:active{
+	background-color: rgb(220,220,220) !important;
+}
 .mem-wrapper label .circle:hover, 
 #listen:checked ~ .slider-controls label:nth-of-type(1) .circle,
 #sheridan:checked ~ .slider-controls label:nth-of-type(2) .circle,
